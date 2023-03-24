@@ -1,8 +1,13 @@
 from flask import g
 import sqlite3
+import os
 
 def connect_db():
-    sql = sqlite3.connect('/home/maniac/workspace/flask-food-app/23/questions.db')
+    path = os.getcwd()
+    data_path=os.path.join(path,"questions.db")
+    print(data_path)
+    #sql = sqlite3.connect('/home/maniac/workspace/flask-food-app/left_join/food_log.db')
+    sql = sqlite3.connect(data_path)
     sql.row_factory = sqlite3.Row
     return sql
 
