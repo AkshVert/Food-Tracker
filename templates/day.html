@@ -30,7 +30,7 @@
                 <div class="form-group">
                   <select class="form-control" name="food-select">
                     {% for food in food_results %}
-                      <option value={{ food.id }}></option>{{ food.name }}</option>
+                    <option value="{{ food.id }}">{{ food.name }}</option>
                     {% endfor %}
                   </select>
                 </div>
